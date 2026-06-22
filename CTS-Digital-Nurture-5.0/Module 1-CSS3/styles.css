@@ -1,0 +1,508 @@
+/* =============================================
+   Exercise 1: Universal selector reset
+   ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================================
+   Exercise 2: Body - clean formatted rules
+   ============================================= */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  /* Exercise 4: Background color + image fallback */
+  background-color: #fff7f0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff6b35' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #2d2d2d;
+  line-height: 1.7;
+}
+
+/* =============================================
+   Exercise 3: Element selector - all h2
+   ============================================= */
+h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #2d2d2d;
+  margin-bottom: 15px;
+  /* Exercise 5: text-transform */
+  text-transform: capitalize;
+  /* Exercise 5: letter-spacing */
+  letter-spacing: 1px;
+}
+
+/* Exercise 3: Grouping selector h3 and p */
+h3, p {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+/* =============================================
+   Exercise 3: ID selector - nav
+   ============================================= */
+#mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(122, 40, 0, 0.3);
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+/* Exercise 6: Link pseudo-classes on nav */
+#mainHeader a:link    { color: #ffe0cc; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; }
+#mainHeader a:visited { color: #ffb899; }
+#mainHeader a:hover   { background: rgba(255,255,255,0.2); color: white; transform: translateY(-2px); }
+#mainHeader a:active  { background: rgba(255,255,255,0.35); transform: translateY(0); }
+
+/* =============================================
+   Exercise 3 & 4: ID + gradient on banner
+   ============================================= */
+#welcomeBanner {
+  /* Exercise 4: gradient background */
+  background: linear-gradient(135deg, #ff6b35 0%, #ff9f1c 50%, #ffbf69 100%);
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+#welcomeBanner::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 250px; height: 250px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+#welcomeBanner::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 180px; height: 180px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+
+#welcomeBanner h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  /* Exercise 5: text styling */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.3;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+/* Exercise 3: highlight class */
+.highlight {
+  color: #fff3e0;
+  display: block;
+  font-size: 0.75em;
+  letter-spacing: 5px;
+  margin-top: 8px;
+  opacity: 0.95;
+}
+
+.special-offer {
+  background: rgba(255,255,255,0.2);
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 30px;
+  margin: 20px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: white;
+  color: #ff6b35;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* =============================================
+   Sections
+   ============================================= */
+section {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: white;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(255, 107, 53, 0.08);
+  border-top: 4px solid #ff6b35;
+}
+
+/* Exercise 3: eventCard class selector */
+.eventCard {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(255,107,53,0.12);
+  border-left: 5px solid #ff6b35;
+}
+
+section h2 {
+  border-left: 5px solid #ff6b35;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+/* =============================================
+   Exercise 9: Multi-column newspaper layout
+   ============================================= */
+.news-columns {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid #ffd4c0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.9;
+  margin-top: 15px;
+}
+
+/* =============================================
+   Exercise 7: Table styling
+   ============================================= */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+caption {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #ff6b35;
+  /* Exercise 5: text-align */
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+th {
+  background: linear-gradient(135deg, #ff6b35, #ff9f1c);
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ffe5d9;
+}
+
+/* Exercise 7: Zebra striping */
+tbody tr:nth-child(even) {
+  background-color: #fff7f3;
+}
+
+tbody tr:hover {
+  background-color: #fff0e8;
+  transition: background 0.2s;
+}
+
+/* Exercise 8: Box model on event images */
+.event-img {
+  width: 220px;
+  height: 140px;
+  border: 3px solid #ff9f1c;
+  padding: 3px;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255,107,53,0.3);
+}
+
+/* =============================================
+   Exercise 2 & 8: Form + box model
+   ============================================= */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  color: #7a2800;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ffe5d9;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  background: #fffaf8;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Exercise 8: Outline on focus field */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 4px rgba(255,107,53,0.15);
+  background: white;
+}
+
+/* Exercise 2: CTA button */
+.cta-button {
+  background: linear-gradient(135deg, #ff6b35, #ff9f1c);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(255,107,53,0.35);
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(255,107,53,0.45);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #888, #555);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+#confirmOutput {
+  display: none;
+  margin-top: 15px;
+  background: #e8f8e8;
+  color: #2d7a2d;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  border-left: 4px solid #2d7a2d;
+}
+
+#feeDisplay {
+  color: #ff6b35;
+  font-weight: 700;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+#charCount {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Exercise 6: Feedback link pseudo-classes */
+.feedback-link:link    { color: #ff6b35; font-weight: 600; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.3s; }
+.feedback-link:visited { color: #c94b00; }
+.feedback-link:hover   { color: #ff3d00; border-bottom: 2px solid #ff3d00; }
+.feedback-link:active  { color: #7a2800; }
+
+/* Exercise 6: List without bullets */
+.event-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.event-list li {
+  padding: 12px 20px;
+  margin: 8px 0;
+  background: linear-gradient(90deg, #fff0e8, #fff7f3);
+  border-left: 4px solid #ff6b35;
+  border-radius: 0 10px 10px 0;
+  font-weight: 600;
+  color: #7a2800;
+  /* Exercise 6: list-style-position */
+  list-style-position: inside;
+  transition: all 0.2s;
+}
+
+.event-list li:hover {
+  background: linear-gradient(90deg, #ffe5d9, #fff0e8);
+  transform: translateX(5px);
+}
+
+/* Video */
+video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 14px;
+  margin-top: 15px;
+  border: 3px solid #ff9f1c;
+  display: block;
+}
+
+#videoMsg {
+  color: #2d7a2d;
+  font-weight: 700;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #2d1b00, #7a2800);
+  color: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-inner p {
+  color: #ffbf69;
+  margin-bottom: 8px;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white !important;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.footer-links a:link,
+.footer-links a:visited { color: #ffd4c0; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+.footer-links a:hover   { color: white; }
+.footer-links a:active  { color: #ffbf69; }
+
+/* =============================================
+   Exercise 8: visibility vs display demo
+   — add class "hidden-vis" to hide but keep space
+   — add class "hidden-disp" to fully remove
+   ============================================= */
+.hidden-vis  { visibility: hidden; }
+.hidden-disp { display: none; }
+
+/* =============================================
+   Exercise 10: Media queries
+   ============================================= */
+@media (max-width: 768px) {
+  #mainHeader {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  #welcomeBanner h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .news-columns {
+    column-count: 1;
+  }
+
+  section {
+    padding: 25px 20px;
+    margin: 15px 10px;
+  }
+
+  .event-img {
+    width: 100%;
+    height: auto;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #welcomeBanner {
+    padding: 50px 20px;
+  }
+
+  #welcomeBanner h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}

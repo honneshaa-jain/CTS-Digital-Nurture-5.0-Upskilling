@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Community Event Portal - Bootstrap 5</title>
+
+  <!-- Exercise 1.1: Bootstrap 5 via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Exercise 17.1: Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+  <!-- ========== Exercise 1 & 2: Bootstrap Setup ========== -->
+  <!-- Exercise 1.2: bootstrap.bundle.min.js included -->
+
+  <!-- ========== Exercise 10.1: Responsive Navbar ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i class="bi bi-calendar-event me-2"></i>EventHub
+      </a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+          <!-- Exercise 10.2: Nav pills -->
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-light btn-sm ms-2 px-3" href="help.html" target="_blank">
+              Help <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== Hero / Welcome Banner ========== -->
+  <!-- Exercise 13.1: bg-primary contextual background -->
+  <div class="bg-primary text-white py-5 text-center">
+    <div class="container py-4">
+      <h1 class="display-4 fw-bold">Welcome to the</h1>
+      <h2 class="display-5 fw-bold text-warning">Local Community Event Portal</h2>
+      <!-- Exercise 7.1: lead, text-muted -->
+      <p class="lead mt-3">Your one-stop portal for all local community events.</p>
+      <!-- Exercise 9.1: Buttons -->
+      <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#register" class="btn btn-warning btn-lg fw-bold px-5">
+          <i class="bi bi-pencil-square me-2"></i>Register Now
+        </a>
+        <a href="#events" class="btn btn-outline-light btn-lg px-5">
+          <i class="bi bi-calendar3 me-2"></i>View Events
+        </a>
+      </div>
+      <!-- Exercise 12.1: Spacing utilities -->
+      <div class="mt-4">
+        <span class="badge bg-warning text-dark fs-6 py-2 px-4">
+          <i class="bi bi-star-fill me-1"></i>Free registration for first-time users!
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Exercise 13.1: Dashboard color sections ========== -->
+  <div class="container-fluid py-3">
+    <div class="row text-center g-0">
+      <div class="col-md-3 bg-primary text-white py-3">
+        <i class="bi bi-people-fill fs-3"></i>
+        <h5 class="fw-bold mt-2">2,500+</h5>
+        <p class="mb-0 small">Active Members</p>
+      </div>
+      <div class="col-md-3 bg-success text-white py-3">
+        <i class="bi bi-calendar-check-fill fs-3"></i>
+        <h5 class="fw-bold mt-2">48</h5>
+        <p class="mb-0 small">Events This Month</p>
+      </div>
+      <div class="col-md-3 bg-warning text-dark py-3">
+        <i class="bi bi-geo-alt-fill fs-3"></i>
+        <h5 class="fw-bold mt-2">12</h5>
+        <p class="mb-0 small">Cities Covered</p>
+      </div>
+      <div class="col-md-3 bg-danger text-white py-3">
+        <i class="bi bi-trophy-fill fs-3"></i>
+        <h5 class="fw-bold mt-2">99%</h5>
+        <p class="mb-0 small">Happy Attendees</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+
+    <!-- ========== Exercise 3 & 4: Grid Layout ========== -->
+    <!-- Home Section -->
+    <section id="home" class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Home</h2>
+      <!-- Exercise 3.1: Three columns responsive grid -->
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-music-note-beamed text-primary fs-1 mb-3"></i>
+              <h5 class="card-title fw-bold">Music Events</h5>
+              <p class="card-text text-muted">Live concerts, festivals, and open-mic nights every weekend.</p>
+              <span class="badge bg-primary">Upcoming</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-laptop text-success fs-1 mb-3"></i>
+              <h5 class="card-title fw-bold">Tech Talks</h5>
+              <p class="card-text text-muted">Industry experts sharing insights on the latest in technology.</p>
+              <span class="badge bg-success">Featured</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-egg-fried text-warning fs-1 mb-3"></i>
+              <h5 class="card-title fw-bold">Food Fairs</h5>
+              <p class="card-text text-muted">Celebrate local cuisine with chefs, tastings, and demos.</p>
+              <span class="badge bg-warning text-dark">Free Entry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Events Section ========== -->
+    <section id="events" class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Upcoming Events</h2>
+
+      <!-- Exercise 10.2: Nav tabs -->
+      <ul class="nav nav-tabs mb-4" id="eventTabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#allEvents">All Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#musicEvents">Music</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#techEvents">Tech</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="allEvents">
+          <!-- Exercise 4.1: Sidebar + content layout -->
+          <div class="row g-4">
+            <!-- Sidebar col-md-3 -->
+            <div class="col-md-3">
+              <div class="card border-0 bg-primary text-white shadow-sm">
+                <div class="card-body p-3">
+                  <h6 class="fw-bold mb-3"><i class="bi bi-funnel me-2"></i>Filter Events</h6>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-outline-light btn-sm text-start">All Cities</button>
+                    <button class="btn btn-outline-light btn-sm text-start">New York</button>
+                    <button class="btn btn-outline-light btn-sm text-start">Los Angeles</button>
+                    <button class="btn btn-outline-light btn-sm text-start">Chicago</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Content area col-md-9 -->
+            <div class="col-md-9">
+              <div class="row g-3">
+                <!-- Exercise 11.1: Profile cards -->
+                <div class="col-sm-6">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="https://picsum.photos/seed/music/400/200" class="card-img-top" alt="Music Festival" style="height:160px; object-fit:cover;" />
+                    <div class="card-body">
+                      <span class="badge bg-primary mb-2">Music</span>
+                      <h5 class="card-title fw-bold">Music Festival 2025</h5>
+                      <p class="card-text text-muted small">Live performances across 3 stages. An unforgettable night!</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-primary fw-bold">₹500</span>
+                        <a href="#register" class="btn btn-primary btn-sm">Register</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="https://picsum.photos/seed/tech/400/200" class="card-img-top" alt="Tech Talk" style="height:160px; object-fit:cover;" />
+                    <div class="card-body">
+                      <span class="badge bg-success mb-2">Tech</span>
+                      <h5 class="card-title fw-bold">Tech Talk Series</h5>
+                      <p class="card-text text-muted small">AI, Cloud & Web Dev experts share their knowledge live.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-success fw-bold">₹300</span>
+                        <a href="#register" class="btn btn-success btn-sm">Register</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="https://picsum.photos/seed/food/400/200" class="card-img-top" alt="Food Fair" style="height:160px; object-fit:cover;" />
+                    <div class="card-body">
+                      <span class="badge bg-warning text-dark mb-2">Food</span>
+                      <h5 class="card-title fw-bold">Community Food Fair</h5>
+                      <p class="card-text text-muted small">Local cuisine, live cooking demos, and lots of fun!</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-warning fw-bold">Free</span>
+                        <a href="#register" class="btn btn-warning btn-sm text-dark">Register</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="https://picsum.photos/seed/art/400/200" class="card-img-top" alt="Art Show" style="height:160px; object-fit:cover;" />
+                    <div class="card-body">
+                      <span class="badge bg-danger mb-2">Art</span>
+                      <h5 class="card-title fw-bold">Community Art Show</h5>
+                      <p class="card-text text-muted small">100+ local artists showcasing their finest works.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-danger fw-bold">₹200</span>
+                        <a href="#register" class="btn btn-danger btn-sm">Register</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="musicEvents">
+          <div class="alert alert-primary"><i class="bi bi-music-note me-2"></i>Showing Music events only.</div>
+        </div>
+        <div class="tab-pane fade" id="techEvents">
+          <div class="alert alert-success"><i class="bi bi-laptop me-2"></i>Showing Tech events only.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Exercise 11.1: Gallery with Cards ========== -->
+    <section id="gallery" class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Event Gallery</h2>
+      <!-- Exercise 4.2: Four column equal layout -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <img src="https://picsum.photos/seed/music/300/200" class="card-img-top" alt="Music" style="height:140px;object-fit:cover;" />
+            <div class="card-body p-2 text-center">
+              <small class="fw-bold">Music Festival</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <img src="https://picsum.photos/seed/food/300/200" class="card-img-top" alt="Food" style="height:140px;object-fit:cover;" />
+            <div class="card-body p-2 text-center">
+              <small class="fw-bold">Food Fair</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <img src="https://picsum.photos/seed/art/300/200" class="card-img-top" alt="Art" style="height:140px;object-fit:cover;" />
+            <div class="card-body p-2 text-center">
+              <small class="fw-bold">Art Show</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <img src="https://picsum.photos/seed/yoga/300/200" class="card-img-top" alt="Yoga" style="height:140px;object-fit:cover;" />
+            <div class="card-body p-2 text-center">
+              <small class="fw-bold">Yoga Day</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Exercise 8.1: Registration Form ========== -->
+    <section id="register" class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Event Registration</h2>
+      <!-- Exercise 4.1: Two column layout -->
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <form id="registrationForm" onsubmit="handleSubmit(event)">
+                <!-- Exercise 8.2: form-floating -->
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="regName" placeholder="Full Name" required />
+                      <label for="regName"><i class="bi bi-person me-1"></i>Full Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="regEmail" placeholder="Email" required />
+                      <label for="regEmail"><i class="bi bi-envelope me-1"></i>Email Address</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="date" class="form-control" id="regDate" placeholder="Date" required />
+                      <label for="regDate"><i class="bi bi-calendar me-1"></i>Preferred Date</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <select class="form-select" id="eventType" required>
+                        <option value="">-- Select Event --</option>
+                        <option value="Music">🎵 Music Festival — ₹500</option>
+                        <option value="Tech">💻 Tech Talk — ₹300</option>
+                        <option value="Food">🍜 Food Fair — Free</option>
+                      </select>
+                      <label for="eventType"><i class="bi bi-calendar-event me-1"></i>Event Type</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <!-- Exercise 8.1: input-group -->
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-chat-left-text"></i></span>
+                      <textarea class="form-control" id="regMessage" placeholder="Any special requests..." rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <!-- Exercise 8.1: form-check -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+                      <label class="form-check-label" for="agreeTerms">
+                        I agree to the <a href="#">Terms & Conditions</a>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <!-- Exercise 9.1: btn-primary -->
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                      <i class="bi bi-send me-2"></i>Register Now
+                    </button>
+                  </div>
+                </div>
+                <div id="confirmOutput" class="alert alert-success mt-3 d-none">
+                  <i class="bi bi-check-circle me-2"></i>You have successfully registered!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar info -->
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="card border-0 bg-primary text-white shadow-sm mb-3">
+            <div class="card-body p-4">
+              <h5 class="fw-bold"><i class="bi bi-info-circle me-2"></i>Event Info</h5>
+              <ul class="list-unstyled mt-3">
+                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Music Festival — ₹500</li>
+                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Tech Talk — ₹300</li>
+                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Food Fair — Free</li>
+                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Art Show — ₹200</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card border-0 bg-warning shadow-sm">
+            <div class="card-body p-4 text-dark">
+              <h5 class="fw-bold"><i class="bi bi-star-fill me-2"></i>First Time?</h5>
+              <p class="mb-0 small">Register today and get free entry to your first event! Use code <strong>FIRST2025</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Exercise 8.1: Feedback Form ========== -->
+    <section id="feedback" class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Event Feedback</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="phone" placeholder="Phone" onblur="validatePhone()" />
+            <label><i class="bi bi-telephone me-1"></i>Phone Number</label>
+          </div>
+          <select class="form-select mb-3" id="feedbackEventType" onchange="showFeedbackFee()">
+            <option value="">-- Select Event --</option>
+            <option value="Music">🎵 Music Festival</option>
+            <option value="Tech">💻 Tech Talk</option>
+            <option value="Food">🍜 Food Fair</option>
+          </select>
+          <div id="feeDisplay" class="alert alert-info d-none py-2"></div>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="bi bi-chat-quote"></i></span>
+            <textarea class="form-control" id="feedbackText" placeholder="Share your experience..." onkeyup="countChars()" rows="4"></textarea>
+          </div>
+          <small id="charCount" class="text-muted">0 characters typed</small>
+          <br/><br/>
+          <!-- Exercise 9.1 & 9.2: Button groups -->
+          <div class="btn-group w-100" role="group">
+            <button class="btn btn-outline-primary" onclick="alert('Thank you! 🎉')">
+              <i class="bi bi-hand-thumbs-up me-1"></i>Submit
+            </button>
+            <button class="btn btn-outline-secondary" onclick="document.getElementById('feedbackText').value=''; document.getElementById('charCount').innerText='0 characters typed'">
+              <i class="bi bi-x-circle me-1"></i>Clear
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!-- Exercise 15.2: shadow, rounded-pill in card -->
+          <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+            <img src="https://picsum.photos/seed/event/400/220" class="card-img-top" alt="Event"
+              ondblclick="this.style.transform = this.style.transform ? '' : 'scale(1.3)'"
+              style="cursor:pointer; transition: transform 0.3s;" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Share Your Experience</h5>
+              <p class="card-text text-muted small">Double-click the image to zoom in!</p>
+              <!-- Exercise 15.1: border utilities -->
+              <div class="d-flex gap-2 mt-2">
+                <span class="badge rounded-pill bg-primary">Music</span>
+                <span class="badge rounded-pill bg-success">Tech</span>
+                <span class="badge rounded-pill bg-warning text-dark">Food</span>
+                <span class="badge rounded-pill bg-danger">Art</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Exercise 18.1: Modal ========== -->
+    <section id="video" class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Event Promo Video</h2>
+      <div class="row align-items-center g-4">
+        <div class="col-md-8">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow">
+            <video controls oncanplay="document.getElementById('videoMsg').classList.remove('d-none')">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div id="videoMsg" class="alert alert-success mt-3 d-none">
+            <i class="bi bi-check-circle me-2"></i>Video ready to play!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Exercise 18.1: Modal trigger button -->
+          <div class="d-grid gap-3">
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+              <i class="bi bi-info-circle me-2"></i>Event Details
+            </button>
+            <!-- Exercise 18.2: Accordion trigger -->
+            <button class="btn btn-outline-primary btn-lg" data-bs-toggle="collapse" data-bs-target="#faqCollapse">
+              <i class="bi bi-question-circle me-2"></i>FAQ
+            </button>
+            <div class="collapse" id="faqCollapse">
+              <!-- Exercise 18.2: Accordion -->
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                      How do I register?
+                    </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">Fill in the registration form above and click Register Now!</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                      Can I cancel my registration?
+                    </button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">Yes, cancellations are allowed up to 48 hours before the event.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Exercise 14.1 & 14.2: Display utilities + Responsive Sidebar ========== -->
+    <section class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Portal Features</h2>
+      <div class="row g-4">
+        <!-- Exercise 14.2: Sidebar visible only on tablets and above -->
+        <div class="col-md-3 d-none d-md-block">
+          <div class="card border-primary border-2 shadow-sm">
+            <div class="card-header bg-primary text-white fw-bold">
+              <i class="bi bi-layout-sidebar me-2"></i>Quick Links
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="#events" class="text-decoration-none"><i class="bi bi-calendar me-2 text-primary"></i>Events</a></li>
+              <li class="list-group-item"><a href="#register" class="text-decoration-none"><i class="bi bi-pencil me-2 text-success"></i>Register</a></li>
+              <li class="list-group-item"><a href="#feedback" class="text-decoration-none"><i class="bi bi-chat me-2 text-warning"></i>Feedback</a></li>
+              <li class="list-group-item"><a href="#location" class="text-decoration-none"><i class="bi bi-geo-alt me-2 text-danger"></i>Location</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <!-- Exercise 5.1: Centered content -->
+          <div class="row g-3 justify-content-center align-items-center">
+            <!-- Exercise 7.2: text-uppercase etc -->
+            <div class="col-sm-4 text-center">
+              <div class="card border-0 bg-primary bg-gradient text-white shadow p-4">
+                <i class="bi bi-lightning-fill fs-1 mb-2"></i>
+                <h6 class="text-uppercase fw-bold">Fast Registration</h6>
+                <p class="small mb-0 text-white-50">Register in under 2 minutes</p>
+              </div>
+            </div>
+            <div class="col-sm-4 text-center">
+              <div class="card border-0 bg-success bg-gradient text-white shadow p-4">
+                <i class="bi bi-shield-check-fill fs-1 mb-2"></i>
+                <h6 class="text-uppercase fw-bold">Secure Payments</h6>
+                <p class="small mb-0 text-white-50">100% safe transactions</p>
+              </div>
+            </div>
+            <div class="col-sm-4 text-center">
+              <div class="card border-0 bg-warning bg-gradient text-dark shadow p-4">
+                <i class="bi bi-bell-fill fs-1 mb-2"></i>
+                <h6 class="text-uppercase fw-bold">Instant Alerts</h6>
+                <p class="small mb-0">Get notified instantly</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Preferences ========== -->
+    <section class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Your Preferences</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="bi bi-heart"></i></span>
+            <select class="form-select" id="prefEvent" onchange="savePreference()">
+              <option value="">-- Select Preference --</option>
+              <option value="Music">🎵 Music</option>
+              <option value="Tech">💻 Tech</option>
+              <option value="Food">🍜 Food</option>
+            </select>
+          </div>
+          <div id="prefMsg" class="alert alert-info d-none"></div>
+          <button class="btn btn-outline-danger" onclick="clearPreferences()">
+            <i class="bi bi-trash me-2"></i>Clear Preferences
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Exercise 16.1 + Geolocation ========== -->
+    <section id="location" class="mb-5">
+      <h2 class="fw-bold border-start border-primary border-4 ps-3 mb-4">Find Nearby Events</h2>
+      <div class="text-center py-4">
+        <i class="bi bi-geo-alt-fill text-primary" style="font-size: 3rem;"></i>
+        <p class="text-muted mt-3">Allow location access to discover events closest to you.</p>
+        <button class="btn btn-primary btn-lg px-5" onclick="findLocation()">
+          <i class="bi bi-pin-map me-2"></i>Find Nearby Events
+        </button>
+        <div id="locationResult" class="alert alert-primary mt-4 d-none mx-auto" style="max-width:400px;"></div>
+      </div>
+    </section>
+
+  </div><!-- end container -->
+
+  <!-- ========== Exercise 17.1: Footer with Bootstrap Icons ========== -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold"><i class="bi bi-calendar-event me-2"></i>EventHub</h5>
+          <p class="text-secondary small">Your community. Your events. Your portal.</p>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <h6 class="fw-bold text-uppercase mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="text-secondary text-decoration-none small">Home</a></li>
+            <li><a href="#events" class="text-secondary text-decoration-none small">Events</a></li>
+            <li><a href="#register" class="text-secondary text-decoration-none small">Register</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <h6 class="fw-bold text-uppercase mb-3">Follow Us</h6>
+          <!-- Exercise 17.1 & 17.2: Social media icons -->
+          <div class="d-flex gap-3 justify-content-md-end">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Twitter">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4" />
+      <p class="text-center text-secondary small mb-0">© 2025 Local Community Event Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== Exercise 18.1: Modal ========== -->
+  <div class="modal fade" id="infoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title"><i class="bi bi-info-circle me-2"></i>Event Details</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between">
+              <span><i class="bi bi-music-note me-2 text-primary"></i>Music Festival</span>
+              <span class="badge bg-primary rounded-pill">June 10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span><i class="bi bi-laptop me-2 text-success"></i>Tech Talk</span>
+              <span class="badge bg-success rounded-pill">June 20</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span><i class="bi bi-egg-fried me-2 text-warning"></i>Food Fair</span>
+              <span class="badge bg-warning text-dark rounded-pill">July 1</span>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="#register" class="btn btn-primary" data-bs-dismiss="modal">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exercise 16.1: Fixed footer position indicator -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index:999">
+    <a href="#" class="btn btn-primary btn-sm shadow rounded-circle" style="width:45px;height:45px;display:flex;align-items:center;justify-content:center;">
+      <i class="bi bi-arrow-up"></i>
+    </a>
+  </div>
+
+  <!-- Exercise 1.2 & 2.2: Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('confirmOutput').classList.remove('d-none');
+    }
+    function validatePhone() {
+      const phone = document.getElementById('phone').value;
+      if (phone && !/^\d{10}$/.test(phone)) alert('Please enter a valid 10-digit phone number.');
+    }
+    function showFeedbackFee() {
+      const fees = { Music: '₹500', Tech: '₹300', Food: 'Free' };
+      const val = document.getElementById('feedbackEventType').value;
+      const el = document.getElementById('feeDisplay');
+      if (val) { el.innerText = '💰 Event Fee: ' + fees[val]; el.classList.remove('d-none'); }
+    }
+    function countChars() {
+      document.getElementById('charCount').innerText =
+        document.getElementById('feedbackText').value.length + ' characters typed';
+    }
+    function savePreference() {
+      const pref = document.getElementById('prefEvent').value;
+      if (!pref) return;
+      localStorage.setItem('preferredEvent', pref);
+      const el = document.getElementById('prefMsg');
+      el.innerText = '✅ Preference saved: ' + pref;
+      el.classList.remove('d-none');
+    }
+    function clearPreferences() {
+      localStorage.clear(); sessionStorage.clear();
+      const el = document.getElementById('prefMsg');
+      el.innerText = '🗑️ Preferences cleared!';
+      el.classList.remove('d-none');
+      document.getElementById('prefEvent').value = '';
+    }
+    function findLocation() {
+      const el = document.getElementById('locationResult');
+      el.classList.remove('d-none');
+      el.innerHTML = '<i class="bi bi-arrow-repeat me-2"></i>Locating you...';
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          pos => { el.innerHTML = '<i class="bi bi-geo-alt me-2"></i>Lat: ' + pos.coords.latitude.toFixed(4) + ', Lng: ' + pos.coords.longitude.toFixed(4); },
+          err => { el.innerHTML = '<i class="bi bi-x-circle me-2"></i>' + (err.code === 1 ? 'Location denied.' : 'Could not retrieve location.'); el.classList.replace('alert-primary','alert-danger'); },
+          { enableHighAccuracy: true, timeout: 10000 }
+        );
+      }
+    }
+    window.onload = function() {
+      const saved = localStorage.getItem('preferredEvent');
+      if (saved) {
+        document.getElementById('prefEvent').value = saved;
+        const el = document.getElementById('prefMsg');
+        el.innerText = '👋 Welcome back! Preference: ' + saved;
+        el.classList.remove('d-none');
+      }
+    };
+  </script>
+
+</body>
+</html>
